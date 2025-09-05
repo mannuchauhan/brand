@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Welcome to Orients</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap');
+
+  :root {
+    --black-bg: #000000;
+    --button-bg: #111111;
+    --border-radius: 1rem;
+    --container-max-width: 1200px;
+    --transition-speed: 0.3s;
+  }
+
+  /* Reset box sizing */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--black-bg);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: white;
+    overflow-x: hidden;
+    padding: 1rem;
+  }
+
+  main.container {
+    max-width: var(--container-max-width);
+    width: 100%;
+    text-align: center;
+    position: relative;
+    padding: 4rem 2rem;
+  }
+
+  /* Gradient text style utility */
+  .gradient-text {
+    background: linear-gradient(90deg, #ff3c78, #ffb347, #7affde, #367df8, #f55fdf);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    animation: rainbowGradient 6s ease infinite;
+  }
+
+  @keyframes rainbowGradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  h1.welcome-heading {
+    font-weight: 800;
+    font-size: 4.5rem;
+    margin: 0 0 1rem 0;
+    line-height: 1.1;
+  }
+
+  p.subtitle {
+    font-weight: 600;
+    font-size: 1.5rem;
+    max-width: 700px;
+    margin: 0 auto 3rem auto;
+    color: #cccccc;
+  }
+
+  button.cta-button {
+    background-color: var(--button-bg);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    padding: 1.2rem 4rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: transparent;
+    background-image: linear-gradient(90deg, #ff3c78, #ffb347, #7affde, #367df8, #f55fdf);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbowGradient 6s ease infinite;
+    transition:
+      transform var(--transition-speed) ease,
+      box-shadow var(--transition-speed) ease;
+    box-shadow: 0 0 8px rgba(255, 95, 159, 0.5);
+    user-select: none;
+  }
+
+  button.cta-button:hover,
+  button.cta-button:focus {
+    outline: none;
+    transform: scale(1.07);
+    box-shadow: 0 0 20px rgba(255, 95, 159, 0.9);
+  }
+
+  button.cta-button:active {
+    transform: scale(0.95);
+  }
+
+  /* Digital marketing images container */
+  .animated-images {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    max-width: var(--container-max-width);
+    height: 400px;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    overflow: visible;
+    z-index: 0;
+  }
+
+  .digital-image {
+    position: absolute;
+    width: 80px;
+    opacity: 0.8;
+    filter: drop-shadow(0 0 6px rgba(255 255 255 / 0.25));
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    will-change: transform, opacity;
+  }
+
+  /* Floating animations with different delays and paths */
+  @keyframes floatUpDown {
+    0%, 100% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 0.8;
+    }
+    50% {
+      transform: translateY(-20px) rotate(10deg);
+      opacity: 1;
+    }
+  }
+
+  /* Positions and delays for images */
+  .img1 {
+    top: 10%;
+    left: 20%;
+    animation-name: floatUpDown;
+    animation-duration: 6s;
+    animation-delay: 0s;
+  }
+  .img2 {
+    top: 40%;
+    left: 5%;
+    animation-name: floatUpDown;
+    animation-duration: 7s;
+    animation-delay: 1.5s;
+  }
+  .img3 {
+    top: 70%;
+    left: 25%;
+    animation-name: floatUpDown;
+    animation-duration: 5.5s;
+    animation-delay: 0.7s;
+  }
+  .img4 {
+    top: 15%;
+    right: 20%;
+    animation-name: floatUpDown;
+    animation-duration: 6.5s;
+    animation-delay: 1.2s;
+  }
+  .img5 {
+    top: 50%;
+    right: 10%;
+    animation-name: floatUpDown;
+    animation-duration: 7.2s;
+    animation-delay: 0.3s;
+  }
+  .img6 {
+    top: 80%;
+    right: 25%;
+    animation-name: floatUpDown;
+    animation-duration: 5.8s;
+    animation-delay: 1.7s;
+  }
+</style>
+</head>
+<body>
+  <main class="container" role="main" aria-label="Welcome to Orients">
+    <h1 class="welcome-heading gradient-text">WELCOME TO BRAND ORIENT</h1>
+    <p class="subtitle">Explore innovative digital marketing solutions powered by creativity and cutting-edge technology.</p>
+    <button  class="cta-button" type="button" id="openNextPageBtn"aria-label="Open next page with digital marketing details"> <a href="./index.html"></a> Click Me </button>
+  </main>
+
+  <div class="animated-images" aria-hidden="true">
+    <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="" class="digital-image img1" />
+    <img src="https://cdn-icons-png.flaticon.com/512/281/281760.png" alt="" class="digital-image img2" />
+    <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="" class="digital-image img3" />
+    <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="" class="digital-image img4" />
+    <img src="./social-media_2518048.png" alt="" class="digital-image img5" />
+    <img src="https://cdn-icons-png.flaticon.com/512/281/281760.png" alt="" class="digital-image img6" />
+    <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="" class="digital-image img7" />
+    <img src="../mobile-marketing_9743023.png" alt="" class="digital-image img8" />
+    
+  </div>
+
+  <script>
+    document.getElementById('openNextPageBtn').addEventListener('click', () => {
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>
+

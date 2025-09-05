@@ -1,0 +1,85 @@
+
+
+  /* Base reset and styling */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #000000;
+    color: #e5e7eb;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+    max-width: 900px;
+    margin: 48px auto 32px;
+    padding: 0 24px;
+  }
+
+  h1 {
+    font-weight: 800;
+    font-size: 3rem;
+    margin-bottom: 24px;
+    color: #f9fafb;
+    text-align: center;
+  }
+
+  section.policy-section {
+    margin-bottom: 32px;
+  }
+
+  section.policy-section h2 {
+    font-weight: 700;
+    font-size: 1.75rem;
+    color: #f3f4f6;
+    margin-bottom: 12px;
+  }
+
+  section.policy-section p {
+    font-size: 1rem;
+    color: white;
+    margin-bottom: 12px;
+  }
+
+  /* Footer styling */
+  footer {
+    flex-shrink: 0;
+    background-color: black;
+    color: white;
+    padding: 24px 32px;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+  }
+
+  footer a:hover,
+  footer a:focus {
+    text-decoration: none;
+    outline: none;
+  }
+
+  @media (max-width: 640px) {
+    main {
+      padding: 0 16px;
+      margin: 32px auto 24px;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    section.policy-section h2 {
+      font-size: 1.5rem;
+    }
+  }
